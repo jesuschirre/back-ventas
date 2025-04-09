@@ -8,7 +8,7 @@ async function conectDb() {
     try {
         await db.authenticate();
         await db.sync();
-        console.log("✅ Conexión exitosa a la BD");
+        console.log("✅Conexión exitosa a la BD");
     } catch (error) {
         console.log(error);
         console.log("error al conectar la base de datos")

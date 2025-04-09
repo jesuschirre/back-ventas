@@ -39,7 +39,7 @@ export const createUser = async (req = request, res = response) => {
       }
   
       await user.destroy();
-  
+      res.status(200).json({ message: "Usuario eliminado correctamente" });
       res.json({ message: "Usuario eliminado correctamente" });
   
     } catch (error) {
