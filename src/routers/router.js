@@ -2,7 +2,7 @@ import { Router } from "express";
 import { 
     getUsers,
     createUser,
-    deleteUser } from "./handlers/user.js";
+    deleteUser } from "../handlers/user.js"
 
 const router = Router();
 
