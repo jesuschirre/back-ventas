@@ -2,6 +2,8 @@ import Express from "express";
 import db from "./config/db.js";
 import router from "./routers/router.js";
 import routerclie from "./routers/routerClient.js";
+import routerCategoria from "./routers/routerCat.js";
+import routerproduct from "./routers/routerProduct.js";
 import cors from "cors"; 
 
 async function conectDb() {
@@ -27,5 +29,10 @@ server.use(Express.json());
 server.use("/api/usuarios", router);
 
 server.use("/api/clientes", routerclie);
+
+server.use("/api/categoria", routerCategoria);
+
+server.use("/api/producto", routerproduct);
+
 
 export default server;
