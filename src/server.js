@@ -4,6 +4,7 @@ import router from "./routers/router.js";
 import routerclie from "./routers/routerClient.js";
 import routerCategoria from "./routers/routerCat.js";
 import routerproduct from "./routers/routerProduct.js";
+import routerVenta from "./routers/ventas.routes.js";
 import cors from "cors"; 
 
 async function conectDb() {
@@ -33,6 +34,8 @@ server.use("/api/clientes", routerclie);
 server.use("/api/categoria", routerCategoria);
 
 server.use("/api/producto", routerproduct);
+
+server.use("/api/ventas", routerVenta);
 
 
 export default server;
